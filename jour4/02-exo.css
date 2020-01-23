@@ -1,0 +1,59 @@
+/*couleurs*/
+/*conteneur*/
+/* grilles */
+/* responsive */
+/*mixin*/
+/*mise en forme*/
+body .dark-nav {
+  background: #333333;
+  color: white;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .dark-nav .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .dark-nav .nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+body .dark-nav .nav ul li {
+  padding: 10px;
+}
+body .dark-nav .nav ul li a {
+  color: white;
+}
+
+.light-nav {
+  background: white;
+  color: #333333;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.light-nav .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.light-nav .nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.light-nav .nav ul li {
+  padding: 10px;
+}
+.light-nav .nav ul li a {
+  color: #333333;
+}
+
+/*# sourceMappingURL=02-exo.css.map */

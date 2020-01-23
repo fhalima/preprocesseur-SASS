@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/*
+Créer un ensemble de variables
+google => color hunt => https://colorhunt.co
+*/
+/*bordure et ombrage*/
+/* dimensions*/
+/*grille*/
+/*font size*/
+/*mise en forme*/
+.container {
+  margin: 0 auto;
+  width: 960px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+@media screen and (min-width:351px) and (max-width:480px) {
+  .container {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}
+
+/*si je suis sur un smartphone portrait => 1 colonne*/
+h2 {
+  font-size: 32px;
+  /*pour les valeurs chiffré on peut faire des calculs*/
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 3px #beebe9;
+}
+
+button {
+  display: block;
+  font-size: 12.8px;
+  margin-top: 30px;
+}
+
+img {
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px #beebe9;
+}
+
+/*# sourceMappingURL=05-variable.css.map */

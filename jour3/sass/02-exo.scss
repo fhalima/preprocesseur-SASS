@@ -1,0 +1,110 @@
+/*
+1/ créer un nouveau fichier sass/02-exo.scss
+2/ créer le fichier 02-exo.html
+3/ arrêter l'ancienne commande Ctrl + C
+4/ sass --watch ./sass/02-exo.scss ./02-exo.css
+le fichier html 02-exo.html contient 
+.container
+    une section 
+        div
+            formulaire
+                div 
+                    label + select
+                        option : France | Allemagne | Italie
+                div
+                    label + input type texte
+                div
+                    input type submit
+        address
+            iframe avec une google map 
+en scss 
+    .container est responsive
+    la section est une grille de deux colonnes  | si l'écran attent 720px grille 1 colonne
+
+    faire apparaitre la div contenant le formulaire depuis à la gauche
+            en + avec changer la couleur fond de vert vers le blanc
+    
+    faire apparaitre la div contenant l'iframe depuis la droite
+            en + changer la couleur de fond de rouge vers le blanc
+utiliser les variables / les mixin / l'imbrication (nesting)
+*/
+
+/*container*/
+
+$container: 960px;
+$container-fluid: 100%;
+
+/* grilles */
+$grille-2: repeat(2, 1fr);
+$grille-1: 1fr;
+
+$marge: 20px;
+
+@import "responsive";
+
+/* mixin*/
+@mixin apparition($sens, $X, $color1: blue, $color2: white) {
+  @keyframes apparition-#{$sens} {
+    from {
+      transform: translate($X, 0);
+      background-color: $color1;
+      opacity: 0;
+    }
+    to {
+      transform: translate(0, 0);
+      background-color: $color2;
+      opacity: 1;
+    }
+  }
+}
+
+@mixin form-zone() {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  grid-gap: $marge;
+}
+
+.container {
+  margin: 0 auto;
+  width: $container;
+  @media #{$smartphone-portrait} , #{$smartphone-paysage} ,#{$tablette-portrait} , #{$tablette-paysage} {
+    width: $container-fluid;
+  }
+}
+
+section {
+  display: grid;
+  grid-template-columns: $grille-2;
+  grid-gap: $marge;
+  align-items: center;
+  @media #{$smartphone-portrait} , #{$smartphone-paysage} ,#{$tablette-portrait} , #{$tablette-paysage} {
+    grid-template-columns: $grille-1;
+  }
+  & > div {
+    animation: apparition-gauche 2s;
+    form {
+      div {
+        &:first-child {
+          @include form-zone();
+        }
+        &:nth-child(2) {
+          @include form-zone();
+        }
+        &:last-child {
+          display: grid;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  address {
+    iframe {
+      width: 100% !important; //cette règle permet au iframe de ne pas depasser son conteneur
+      height: 300px !important;
+      animation: apparition-droite 2s;
+    }
+  }
+}
+
+@include apparition("droite", 300px, red);
+@include apparition("gauche", -3000px, green);

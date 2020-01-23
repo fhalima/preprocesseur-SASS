@@ -1,0 +1,71 @@
+/* nous allons écrire dans le fichier 
+que l'on vient de créer
+le binaire que l'on vient de télécharger
+va transformer le scss => css
+lancer le terminal
+./dart-sass/sass.bat --watch ./sass/01-style.scss ./01-style.css
+node -v 
+npm install -g sass 
+sass --version
+sass  --watch ./sass/01-style.scss ./01-style.css
+*/
+
+// /dart-sass/sass.bat --watch ./sass/01-style.scss ./01-style.css
+
+p {
+  color: red;
+}
+a {
+  color: blue;
+}
+h1 {
+  font-size: 200px;
+}
+
+/*variables*/
+$taille-titre: 20px;
+$color: #fff;
+$color-btn: rgba(0, 20, 30, 0.4);
+$border-p: 1px solid black;
+$marge-centrer: 0 auto;
+$grille-5-colonnes: 1fr 1fr 1fr 1fr 1fr;
+
+/*********/
+
+li {
+  font-size: $taille-titre;
+  background-color: $color;
+  border: $border-p;
+}
+p {
+    font-size: $taille-titre;
+    margin:$marge-centrer;
+    display: grid;
+    grid-template-columns: $grille-5-colonnes;
+}
+
+/* héritage*/
+
+.btn{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+.btn-confirm{
+    @extend .btn; /*les 3 propriété de .btn sont dejas inclus avec le @extend*/
+    background: blue;
+    color: white;
+}
+.btn-supprimer{
+    @extend .btn; /*les 3 propriété de .btn sont dejas inclus avec le @extend*/
+    background: red;
+    color: white;
+}
+.btn-supprimer-sm{
+    @extend .btn-supprimer; /*les 3 propriété de .btn sont dejas inclus avec le @extend*/
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    font-size: 10px;
+}
+

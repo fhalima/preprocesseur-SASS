@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/* nous allons écrire dans le fichier 
+que l'on vient de créer
+le binaire que l'on vient de télécharger
+va transformer le scss => css
+lancer le terminal
+./dart-sass/sass.bat --watch ./sass/01-style.scss ./01-style.css
+node -v 
+npm install -g sass 
+sass --version
+sass  --watch ./sass/01-style.scss ./01-style.css
+*/
+p {
+  color: red;
+}
+
+a {
+  color: blue;
+}
+
+h1 {
+  font-size: 200px;
+}
+
+/*variables*/
+/*********/
+li {
+  font-size: 20px;
+  background-color: #fff;
+  border: 1px solid black;
+}
+
+p {
+  font-size: 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+/* héritage*/
+.btn, .btn-supprimer, .btn-supprimer-sm, .btn-confirm {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.btn-confirm {
+  /*les 3 propriété de .btn sont dejas inclus avec le @extend*/
+  background: blue;
+  color: white;
+}
+
+.btn-supprimer, .btn-supprimer-sm {
+  /*les 3 propriété de .btn sont dejas inclus avec le @extend*/
+  background: red;
+  color: white;
+}
+
+.btn-supprimer-sm {
+  /*les 3 propriété de .btn sont dejas inclus avec le @extend*/
+  background: red;
+  color: white;
+  padding: 5px 10px;
+  font-size: 10px;
+}
+
+/*# sourceMappingURL=01-style.css.map */

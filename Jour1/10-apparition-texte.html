@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        article {
+            position: relative;
+            width: 400px;
+        }
+
+        article div {
+            background: url("https://via.placeholder.com/400x200?text=image1");
+            width: 400px;
+            height: 200px;
+            position: absolute;
+            z-index: 2; 
+            transition: width .3s;
+        }
+
+        article p {
+            position: absolute;
+            z-index: 1;
+            transition: margin-left .3s; /*ou 300ms */
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        article:hover div {
+            width: 200px;
+        }
+        article:hover p {
+            margin-left: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- article>div+p>lorem -->
+
+    <article>
+        <div></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quibusdam delectus asperiores eos amet
+            repellendus totam illum tempora voluptates excepturi qui nulla quod optio animi quam impedit, eligendi vero
+            blanditiis?</p>
+    </article>
+
+<!-- créer une nouvelle page hml
+11-exo.html
+section
+    article*3
+        h2
+        p 30 mots
+        button lire la suite
+section
+    figure*2
+    image
+    p avec 20mots
+
+
+CSS : a l'ouverture de la page :
+la premiere section qui apparait (translate de la gauche pour se centrer)
+la deuxieme section qui apparait de la droite pou se centrer 
+
+au survol des images la deuxième section
+apparaitre le texte qui est caché n dessous de l'image 
+-->
+
+
+
+
+</body>
+
+</html>

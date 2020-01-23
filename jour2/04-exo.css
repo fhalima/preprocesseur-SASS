@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/* 
+
+1/créer un nouveau fichier sass/04-exo.scss
+2/ créer le fichier 04-exo.html
+3/ arrêter l'ancienne commande Ctrl + C
+4/ sass --watch ./sass/04-exo.scss ./04-exo.css
+Dans le fichier 04-exo.html
+menu > ul >li *5 > a href= # > texte 1 mot
+scss 
+menu est une grille de 5 colonnes
+séparation de 10px
+si on passe sur un écran de largeur 700px => grille devient une grille de 3 colonnes
+le 1ère élement du menu
+lorsque l'on passe la souris dessus => rouge en 1 s
+le 2ème élement du menu
+lorsque l'on passe la souris dessus => taille de police va grandir de 20%
+le dernier élément du menu 
+changer la couleur de fond dans la couleur voulu
+changer la police dans la couleur voulu
+les deux en .3s
+pas de soucis pour utiliser des variables scss
+
+*/
+menu ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+}
+@media screen and (max-width: 700px) {
+  menu ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+menu ul li {
+  list-style: none;
+}
+menu ul li a {
+  text-decoration: none;
+  font-family: Arial;
+}
+menu ul li:first-child a {
+  transition: color 1s;
+}
+menu ul li:first-child a:hover {
+  color: red;
+}
+menu ul li:nth-child(2) a {
+  transition: font-size 1s;
+}
+menu ul li:nth-child(2) a:hover {
+  font-size: 1.2rem;
+}
+menu ul li:last-child a {
+  transition: background-color 1s;
+}
+menu ul li:last-child a:hover {
+  background-color: peru;
+  color: purple 0.3s;
+}
+
+/*# sourceMappingURL=04-exo.css.map */

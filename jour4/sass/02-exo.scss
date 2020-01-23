@@ -1,0 +1,72 @@
+// variables
+
+/*couleurs*/
+$color-blue: #3e64ff;
+$color-gris-clair: #f4f4f4;
+$color-gris-fonce: #333333;
+$color-gris: #d1cdcddc;
+$color-rose: #f54291;
+$color-violet: #7e0cf5;
+
+/*conteneur*/
+$container: 960px;
+$container-fluid: 100%;
+
+/* grilles */
+$grille-menu: 120px 1fr;
+
+$grille-4: repeat(4, 1fr);
+$grille-3: repeat(3, 1fr);
+$grille-2: repeat(2, 1fr);
+$grille-1: 1fr;
+
+$marge: 20px;
+
+/* responsive */
+
+$smartphone-portrait: "screen and (max-width:350px)";
+$smartphone-paysage: "screen and (min-width:351px) and (max-width:480px)";
+$tablette-portrait: "screen and (min-width:481px) and (max-width:720px)";
+$tablette-paysage: "screen and (min-width:721px) and (max-width:960px)";
+$ordi: "screen and (min-width:961px)";
+
+/*mixin*/
+@mixin flex-mod() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin grid-mod($space) {
+  display: grid;
+  grid-template-columns: $space 1fr;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 5px;
+}
+@mixin navig($bg-color, $txt-color) {
+  background: $bg-color;
+  color: $txt-color;
+  margin: 0;
+  @include flex-mod();
+  .nav {
+    @include flex-mod();
+    ul {
+      @include flex-mod();
+      list-style: none;
+      li {
+        padding: 10px;
+        a {
+          color: $txt-color;
+        }
+      }
+    }
+  }
+}
+
+/*mise en forme*/
+body .dark-nav {
+  @include navig($color-gris-fonce, white);
+}
+.light-nav {
+  @include navig(white, $color-gris-fonce);
+}

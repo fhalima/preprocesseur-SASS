@@ -1,0 +1,47 @@
+/*CSS classique*/
+/*Nesting : Imbrication : selecteur dans un autre selecteur + ne pas oublier l'indentation*/
+.a1 {
+  width: 200px;
+}
+.a1 h2 {
+  font-size: 20px;
+  color: blue;
+}
+.a1 p span {
+  text-transform: uppercase;
+}
+
+/*Imbrication avec les pseudos selecteurs
+p:hover
+p:nth-child()
+p::after
+p:before
+*/
+p {
+  transition: color 1s;
+}
+p:hover {
+  color: blue;
+}
+
+/*Imbrication et media query*/
+/*le css classic
+.a h2 {
+  font-size: 50px;  
+}
+@media screen and (max-width: 720px) {
+   .a h2 {
+  font-size: 20px;  
+}
+}
+*/
+.a h2 {
+  font-size: 50px;
+}
+@media screen and (max-width: 720px) {
+  .a h2 {
+    font-size: 20px;
+  }
+}
+
+/*# sourceMappingURL=03-nesting.css.map */

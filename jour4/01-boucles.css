@@ -1,0 +1,172 @@
+@charset "UTF-8";
+/*
+0/ créer le dossier jour4
+1/ créer un nouveau fichier sass/01-boucles.scss
+2/ créer le fichier 01-boucles.html
+3/ arrêter l'ancienne commande Ctrl + C
+4/ sass --watch ./sass/01-boucles.scss ./01-boucles.css
+*/
+.item-red {
+  background: red;
+}
+
+.item-blue {
+  background: blue;
+}
+
+.item-green {
+  background: green;
+}
+
+.item-orange {
+  background: orange;
+}
+
+.item-pink {
+  background: pink;
+}
+
+.categorie-js {
+  color: red;
+}
+
+.categorie-php {
+  color: green;
+}
+
+.categorie-ajax {
+  color: blue;
+}
+
+.categorie-symfony {
+  border: 1px solid red;
+}
+
+.categorie-drupal {
+  border: 1px solid green;
+}
+
+.categorie-wordpress {
+  border: 1px solid blue;
+}
+
+.icon-1 {
+  margin: 0 20%;
+}
+
+.icon-2 {
+  margin: 0 40%;
+}
+
+.icon-4 {
+  margin: 0 60%;
+}
+
+.icon-5 {
+  margin: 0 80%;
+}
+
+.icon-1 {
+  margin: 0 20%;
+}
+
+.icon-2 {
+  margin: 0 40%;
+}
+
+.icon-4 {
+  margin: 0 60%;
+}
+
+.icon-5 {
+  margin: 0 80%;
+}
+
+.do {
+  position: relative;
+  top: 10px;
+  left: 30px;
+}
+
+.re {
+  position: relative;
+  top: 30px;
+  left: 40px;
+}
+
+.mi {
+  position: relative;
+  top: 60px;
+  left: 22px;
+}
+
+.fa-credit-card-alt {
+  color: darksalmon;
+  font-size: 30px;
+}
+
+.musique {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: darksalmon;
+}
+.musique .fa-cog {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  font-size: 25px;
+  opacity: 0;
+  animation: fa-cog 0.8s infinite;
+}
+.musique .fa-crop {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  font-size: 15px;
+  opacity: 0;
+  animation: fa-crop 0.8s infinite;
+}
+.musique .fa-download {
+  position: absolute;
+  top: 60px;
+  left: 80px;
+  font-size: 22px;
+  opacity: 0;
+  animation: fa-download 0.8s infinite;
+}
+.musique .fa-music {
+  position: absolute;
+  top: 120px;
+  left: 80px;
+  font-size: 22px;
+  opacity: 0;
+  animation: fa-music 0.8s infinite;
+}
+
+@keyframes fa-cog {
+  to {
+    transform: translate(0, -25px);
+    opacity: 1;
+  }
+}
+@keyframes fa-crop {
+  to {
+    transform: translate(0, -15px);
+    opacity: 1;
+  }
+}
+@keyframes fa-download {
+  to {
+    transform: translate(0, -22px);
+    opacity: 1;
+  }
+}
+@keyframes fa-music {
+  to {
+    transform: translate(0, -22px);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=01-boucles.css.map */

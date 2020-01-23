@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href=""><!-- link  -->
+    <link rel="stylesheet" href="style.css"><!-- link:css  -->
+    <style>
+        img{
+            max-width:100%;
+        }
+        section:first-child {
+            display: flex;
+            justify-content: space-between;
+        }
+        section:first-child article{
+            max-width: 33%;
+            
+        }
+        section:first-child article a{
+            display: block;
+            
+        } 
+        section:last-child {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+        }
+        section:last-child header{
+            display: flex;
+            justify-content: space-between;
+            align-items :center;
+
+
+        }
+
+
+
+
+
+
+        @media screen and (max-width:720px) {
+
+            /*@m*/
+            section:last-child article{
+                max-width: 45%;
+            }
+            section:first-child article:last-child {
+                display: none;
+            }     
+
+       
+
+            /*@m*/
+            section:last-child {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- 
+
+div class container
+    section
+        3 articles
+            image
+            lien hypertexte lire la suite
+    
+
+    section
+        10 articles
+            header
+                h2>3 :mots
+                <time>20/01/2020</time>
+            p contenant 20 mots
+répartir les 3 articles de la premiere section sur la meme ligne 
+chacun ayant une largeur de 33% 
+la deuxième section est une grille de 3 colonnes
+
+si l'ecran atteint la largeur de 720px
+la première section n'affiche plus de 2 articles
+la deuxieme section est une grille de 2 colonnes
+
+
+-->
+
+    <!-- .container>(section>article*3>img[src="https://via.placeholder.com/400x150?text=image1"]+a[href="#"]>{Lire la suite})+section>article*10>(header>(h2>lorem3)+time>{20/01/2020})+p>lorem20 -->
+
+
+    <div class="container">
+        <section>
+            <article>
+                <img src="https://via.placeholder.com/400x150?text=image1" alt="">
+                <a href="#">Lire la suite</a>
+            </article>
+            <article>
+                <img src="https://via.placeholder.com/400x150?text=image1" alt="">
+                <a href="#">Lire la suite</a>
+            </article>
+            <article>
+                <img src="https://via.placeholder.com/400x150?text=image1" alt="">
+                <a href="#">Lire la suite</a>
+            </article>
+        </section>
+        <section>
+            <article>
+                <header>
+                    <h2>Lorem, ipsum dolor.</h2>
+                    <time>20/01/2020</time>
+                </header>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae quisquam cumque quaerat necessitatibus
+                    ipsum quis eligendi voluptatum commodi, cum nemo.</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Quam, exercitationem iste.</h2>
+                    <time>20/01/2020</time>
+                </header>
+                <p>Quibusdam delectus quas consequatur a numquam, maxime repellendus nisi, ipsa placeat dolor sunt
+                    libero earum tempora dignissimos ipsam, iusto enim!</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Aliquam, assumenda corrupti?</h2>
+                    <time>20/01/2020</time>
+                </header>
+                <p>Molestiae eum itaque maiores tempore, odio nihil expedita dolorum delectus corrupti recusandae
+                    aliquid, debitis doloribus soluta ullam, obcaecati quis laborum.</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Eius, culpa perferendis?</h2>
+                    <time>20/01/2020</time>
+                </header>
+                <p>Unde laborum cumque voluptatem asperiores placeat, sint odio? Similique error quidem unde ipsam eum
+                    veniam voluptatum sapiente nobis reiciendis alias.</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Vel, vero eveniet.</h2>
+                    <time>20/01/2020</time>
+                </header>
+                <p>Velit, odio reprehenderit veniam iste dolores architecto cupiditate eos dicta saepe doloremque et
+                    deserunt alias unde deleniti quam neque. Porro!</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Quo, similique dolores.</h2>
+                    <time>20/01/2020</time>
+                </header>
+                <p>Suscipit illo nesciunt, saepe magni vitae quis perspiciatis numquam aut, odio, consequatur error iste
+                    esse nam. Sequi odit sapiente quo.</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Commodi, dolore atque.</h2>
+                    <time>20/01/2020</time>
+                </header>
+                <p>In eveniet voluptate dignissimos optio doloremque officia obcaecati dolorem ipsa quaerat corrupti
+                    vitae, voluptates quibusdam sequi non nulla minus? Quas!</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Consequatur, praesentium error!</h2>
+                    <time>20/01/2020</time>
+                </header>
+                <p>Quod voluptatem eveniet officiis consequatur dicta ducimus qui ullam ut quia provident iusto nesciunt
+                    ipsum eaque blanditiis alias, optio soluta?</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Debitis, aliquid dolorum.</h2>
+                    <time>20/01/2020</time>
+                </header>
+                <p>Atque velit consectetur molestias, excepturi nesciunt obcaecati sunt? Tempore porro unde facilis
+                    optio eveniet possimus rerum amet fugit a architecto.</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Quo, cum iusto?</h2>
+                    <time>20/01/2020</time>
+                </header>
+                <p>Atque cupiditate facilis aspernatur vitae quasi dignissimos perspiciatis accusantium id hic ratione,
+                    rem eos praesentium amet fugit dolor quae. Ad.</p>
+            </article>
+        </section>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

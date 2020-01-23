@@ -1,0 +1,14 @@
+/*.container*/
+
+$container: 960px;
+$container-fluid: 100%;
+
+/* grilles */
+$grille-menu: 120px 1fr;
+
+$grille-4: repeat(4, 1fr);
+$grille-3: repeat(3, 1fr);
+$grille-2: repeat(2, 1fr);
+$grille-1: 1fr;
+
+$marge: 20px;

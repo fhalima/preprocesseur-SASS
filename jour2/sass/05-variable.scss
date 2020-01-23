@@ -1,0 +1,32 @@
+@import "./variable";
+@import "./responsive";
+
+.container {
+  margin: 0 auto;
+  width: $container;
+  display: grid;
+  grid-template-columns: $grille-default;
+  grid-gap: $grille-marge;
+
+  @media #{$smartphone-paysage} {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}
+
+/*si je suis sur un smartphone portrait => 1 colonne*/
+h2 {
+  font-size: $font-base * 2; /*pour les valeurs chiffré on peut faire des calculs*/
+  margin-bottom: $margin-default + 5px;
+  text-shadow: $ombre;
+}
+button {
+  display: block;
+  font-size: $font-base * 0.8;
+  margin-top: $margin-default + 20px;
+}
+
+img {
+  border-radius: $default-radius;
+  box-shadow: $ombre;
+}

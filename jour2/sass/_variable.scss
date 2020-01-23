@@ -1,0 +1,25 @@
+// sass/_variable.scss
+/*
+Créer un ensemble de variables
+google => color hunt => https://colorhunt.co
+*/
+$couleur-principale: #6e5773;
+$couleur-secondaire: #beebe9;
+
+/*bordure et ombrage*/
+$bordure: px solid $couleur-principale;
+$ombre: 2px 2px 3px $couleur-secondaire;
+
+/* dimensions*/
+$container: 960px;
+
+/*grille*/
+$grille-default: repeat(2, 1fr);
+$grille-marge: 20px;
+$margin-default: 10px;
+
+/*font size*/
+$font-base: 16px;
+$default-radius: 5px;
+
+/*mise en forme*/

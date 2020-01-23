@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/* lié au fichier exo.html
+
+.p1 taille de police 15px / 
+    text shadow 2px 2px grey
+.p2 hérite de p1
+    tout en majuscule
+.p3 hérite de p1
+    changer sa couleur de texte (votre choix)
+.p4 hérité de p2
+    souligner
+.p5 hérité de p4
+    largeur de 200px
+    centrer dans la page*/
+.p1, .p3, .p2, .p4, .p5 {
+  font-size: 15px;
+  text-shadow: 2px 2px grey;
+}
+
+.p2, .p4, .p5 {
+  text-transform: uppercase;
+}
+
+.p3 {
+  color: red;
+}
+
+.p4, .p5 {
+  text-decoration: underline;
+}
+
+.p5 {
+  width: 200px;
+  /*centrer le contenant cad le paragraphe*/
+  margin: 0 auto;
+  /*centrer le contenant*/
+}
+
+/*# sourceMappingURL=02-exo.css.map */

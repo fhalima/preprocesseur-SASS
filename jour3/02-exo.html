@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="02-exo.css">
+</head>
+
+<body>
+
+    <!-- 
+    1/ créer un nouveau fichier sass/02-exo.scss
+    2/ créer le fichier 02-exo.html
+    3/ arrêter l'ancienne commande Ctrl + C
+    4/ sass --watch ./sass/02-exo.scss ./02-exo.css
+    le fichier html 02-exo.html contient 
+    .container
+        une section 
+            div
+                formulaire
+                    div 
+                        label + select
+                            option : France | Allemagne | Italie
+                    div
+                        label + input type texte
+                    div
+                        input type submit
+            address
+                iframe avec une google map 
+    en scss 
+        .container est responsive
+        la section est une grille de deux colonnes  | si l'écran attent 720px grille 1 colonne
+        faire apparaitre la div contenant le formulaire depuis à la gauche
+                en + avec changer la couleur fond de vert vers le blanc
+        
+        faire apparaitre la div contenant l'iframe depuis la droite
+                en + changer la couleur de fond de rouge vers le blanc
+    utiliser les variables / les mixin / l'imbrication (nesting)
+    -->
+
+    <!-- .container>section>(div>form>(div>(label+select>(option>{france})+(option>{allemagne})+option>{italie}))+(div>label+input)+div>input[type="submit"])+adress>iframe -->
+
+    <div class="container">
+        <section>
+            <div>
+                <form action="">
+                    <div>
+                        <label for="">lorem</label>
+                        <select name="" id="">
+                            <option value="">france</option>
+                            <option value="">allemagne</option>
+                            <option value="">italie</option>
+                        </select>
+                    </div>
+                    <div><label for="">nom</label><input type="text"></div>
+                    <div><input type="submit"></div>
+                </form>
+            </div>
+            <address>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.989285263397!2d2.4141888158140294!3d48.858414708658735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66d7eebb345ad%3A0xeb6b5b5bf9fe7ee2!2sDORANCO%20Ecole%20Sup%C3%A9rieure%20des%20Technologies%20Cr%C3%A9atives%20%26%20Organisme%20de%20Formation%20Bagnolet!5e0!3m2!1sfr!2sfr!4v1579687710352!5m2!1sfr!2sfr"
+                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="">
+                </iframe>
+            </address>
+        </section>
+    </div>
+</body>
+
+</html>

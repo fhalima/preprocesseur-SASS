@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul {
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+        }
+
+        ul li {
+            list-style: none;
+
+        }
+
+        a {
+            transition: font-size 2s;
+        }
+
+        a:hover {
+            font-size: 1.3rem;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        img {
+            transition: transform 0.3s;
+        }
+
+        img:hover {
+            transform: translateX(40px);
+        }
+
+        img:first-child {
+            transition: transform 1s;
+        }
+
+        img:first-child:hover {
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <!-- Créer une nouvelle page 08-exo.hml 
+menu nav contenant un ul contenant 5 li contenant un lien hypetexte contenant un mot
+
+section
+    5 images
+css: pour le menu les aligner et répartir l'espace de maniere identique entre chaque items
+pour la section créer une grille de 3 colonnes 
+
+effet
+lorsque vous passez la souris sur un item du menu la taille de police augmente de 30% en 2 secondes 
+lorsque vous passez la souris sur une image 
+pour le 1ere image => appliquez une rotation de 360° e en 1 seconde 
+pour les autres images=> appliquer une translation sur l'axe des X de 40 px en 0.3s
+
+-->
+
+    <!-- nav>ul>li*5>a[href="#"]>lorem1 -->
+
+    <nav>
+        <ul>
+            <li><a href="#">Lorem.</a></li>
+            <li><a href="#">Voluptates?</a></li>
+            <li><a href="#">Eius.</a></li>
+            <li><a href="#">Nulla.</a></li>
+            <li><a href="#">Voluptate?</a></li>
+        </ul>
+    </nav>
+
+    <!-- section>img[src="https://via.placeholder.com/400x150?text=image$"]*5 -->
+
+    <section>
+        <img src="https://via.placeholder.com/400x150?text=image1" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image2" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image3" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image4" alt="">
+        <img src="https://via.placeholder.com/400x150?text=image5" alt="">
+    </section>
+
+</body>
+
+</html>
